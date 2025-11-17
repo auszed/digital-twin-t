@@ -39,3 +39,6 @@ Thumbs.db
 
 # AWS
 .aws/
+
+# ignore also the tutorials
+daily_follow/
