@@ -27,3 +27,11 @@ git checkout -b NAMEBRANCH
 git branch
 git push -u origin NAMEBRANCH
 ```
+
+with this command we switch branches
+```
+git switch
+```
+
+
+
