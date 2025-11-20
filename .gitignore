@@ -39,3 +39,8 @@ Thumbs.db
 
 # AWS
 .aws/
+
+.s_accessKeys.csv
+s_accessKeys
+s_accessKeys.csv
+*.csv
