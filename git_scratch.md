@@ -35,3 +35,13 @@ git switch
 
 
 
+merge the git 
+
+move to the main repo
+then merge
+finally push 
+```
+git checkout main
+git merge day5
+git push origin main
+```
