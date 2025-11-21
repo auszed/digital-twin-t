@@ -45,3 +45,7 @@ git checkout main
 git merge day5
 git push origin main
 ```
+
+
+
+ithub_actions_role_arn = "arn:aws:iam::215982717135:role/github-actions-twin-deploy"
