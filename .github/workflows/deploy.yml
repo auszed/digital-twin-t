@@ -29,6 +29,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: 📝 Confirm Targeted Environment
+        run: |
+          ENVIRONMENT_NAME="${{ github.event.inputs.environment || 'dev' }}"
+          echo "Targeted Environment: $ENVIRONMENT_NAME"
+          echo "Checking for AWS_ROLE_ARN existence in environment secrets..."
+          # Note: We cannot print the secret value, only confirm the variable name is known.
+          if [ -n "${{ secrets.AWS_ROLE_ARN }}" ]; then
+              echo "AWS_ROLE_ARN is available (Secret found)."
+          else
+              echo "❌ AWS_ROLE_ARN is NOT available (Secret NOT found or environment mismatch)."
+              echo "This usually means the secret is missing from the '${ENVIRONMENT_NAME}' environment settings."
+          fi
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
